@@ -1,0 +1,10 @@
+import Studentslist from './0-get_list_students';
+
+function getListStudentIds(Studentslist){
+    const studentsIds = [];
+    const newStudents = Studentslist;
+    const studentsList = newStudents.map((pupil) => studentsIds.push(pupil.id));
+    return studentsList;
+}
+
+export default getListStudentIds(Studentslist);
