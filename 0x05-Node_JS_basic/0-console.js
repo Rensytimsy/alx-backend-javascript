@@ -1,7 +1,6 @@
 const displayMessage = (mssg) => {
-    process.stdout.write(mssg, '\n')
-    return mssg
+    console.log(mssg)
 }
 
 
-displayMessage("Hello world");
+module.exports = displayMessage
