@@ -1,6 +1,5 @@
 const displayMessage = (mssg) => {
-    console.log(mssg)
-}
+  console.log(mssg);
+};
 
-
-module.exports = displayMessage
+module.exports = displayMessage;
