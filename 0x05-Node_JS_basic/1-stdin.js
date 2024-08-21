@@ -1,14 +1,12 @@
-const { spawn } = require('node:child_process');
-const ls = spawn('ls', ['-lh', '/usr']);
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-ls.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
-});
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
 
-ls.stderr.on('data', (data) => {
-  console.error(`stderr: ${data}`);
-});
+  if (chunk) {
+    process.stdout.write(`Your name is: ${chunk}`);
+  }
 
-ls.on('close', (code) => {
-  console.log(`child process exited with code ${code}`);
+
+  process.stdout.write("This important software is now closing \n")
 });
